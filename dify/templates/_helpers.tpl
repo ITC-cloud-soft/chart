@@ -104,15 +104,15 @@ commonBackendEnvs are for api and worker containers
 {{- end }}
 {{- if .Values.postgresql.embedded }}
 - name: DB_USERNAME
-  value: postgres
+  value: "{{ .Values.mysql.auth.username }}"
 - name: DB_PASSWORD
-  value: "{{ .Values.postgresql.auth.postgresPassword }}"
+  value: "{{ .Values.mysql.auth.password }}"
 - name: DB_HOST
-  value: {{ include "dify.fullname" . }}-postgresql
+  value: {{ include "dify.fullname" . }}-mysql
 - name: DB_PORT
-  value: "5432"
+  value: "3306"
 - name: DB_DATABASE
-  value: {{ .Values.postgresql.auth.database }}
+  value: {{ .Values.mysql.auth.database }}
 {{- end }}
 
 {{- if .Values.minio.embedded }}
