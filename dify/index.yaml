@@ -1,0 +1,143 @@
+apiVersion: v1
+entries:
+  dify:
+  - apiVersion: v1
+    appVersion: 0.6.11
+    created: "2024-10-08T15:19:43.079991+09:00"
+    description: A Helm chart for Dify Mysql Version
+    digest: b6bffecd601c607efc0e2fb89e50796664bb7d67ea7a8426b4b2f1c2acf76742
+    home: https://github.com/ITC-cloud-soft/chart
+    maintainers:
+    - name: douban
+    name: dify
+    type: application
+    urls:
+    - https://itc-cloud-soft.github.io/chart/dify/dify-0.0.1.tgz
+    version: 0.0.1
+  minio:
+  - annotations:
+      category: Infrastructure
+      images: |
+        - name: minio
+          image: docker.io/bitnami/minio:2024.4.18-debian-12-r0
+        - name: minio-client
+          image: docker.io/bitnami/minio-client:2024.3.30-debian-12-r2
+        - name: os-shell
+          image: docker.io/bitnami/os-shell:12-debian-12-r18
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 2024.4.18
+    created: "2024-10-08T15:19:43.083344+09:00"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: MinIO(R) is an object storage server, compatible with Amazon S3 cloud
+      storage service, mainly used for storing unstructured data (such as photos,
+      videos, log files, etc.).
+    digest: 4e2fe0e0e25646f9bde303de7628a5f33b94aadb0246207c91c8c22e38388ffc
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/minio/img/minio-stack-220x234.png
+    keywords:
+    - minio
+    - storage
+    - object-storage
+    - s3
+    - cluster
+    maintainers:
+    - name: VMware, Inc.
+      url: https://github.com/bitnami/charts
+    name: minio
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/minio
+    urls:
+    - https://itc-cloud-soft.github.io/chart/dify/charts/minio-14.1.8.tgz
+    version: 14.1.8
+  postgresql:
+  - annotations:
+      category: Database
+      images: |
+        - name: os-shell
+          image: docker.io/bitnami/os-shell:12-debian-12-r20
+        - name: postgres-exporter
+          image: docker.io/bitnami/postgres-exporter:0.15.0-debian-12-r29
+        - name: postgresql
+          image: docker.io/bitnami/postgresql:16.3.0-debian-12-r4
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 16.3.0
+    created: "2024-10-08T15:19:43.086845+09:00"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: PostgreSQL (Postgres) is an open source object-relational database
+      known for reliability and data integrity. ACID-compliant, it supports foreign
+      keys, joins, views, triggers and stored procedures.
+    digest: a561d90be7b392069f70229e731699cffa4ccbfe831b5ba2a3a7164a1967a1f2
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
+    keywords:
+    - postgresql
+    - postgres
+    - database
+    - sql
+    - replication
+    - cluster
+    maintainers:
+    - name: Broadcom, Inc. All Rights Reserved.
+      url: https://github.com/bitnami/charts
+    name: postgresql
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/postgresql
+    urls:
+    - https://itc-cloud-soft.github.io/chart/dify/charts/postgresql-15.2.13.tgz
+    version: 15.2.13
+  redis:
+  - annotations:
+      category: Database
+      images: |
+        - name: kubectl
+          image: docker.io/bitnami/kubectl:1.30.0-debian-12-r0
+        - name: os-shell
+          image: docker.io/bitnami/os-shell:12-debian-12-r19
+        - name: redis
+          image: docker.io/bitnami/redis:7.2.4-debian-12-r13
+        - name: redis-exporter
+          image: docker.io/bitnami/redis-exporter:1.59.0-debian-12-r1
+        - name: redis-sentinel
+          image: docker.io/bitnami/redis-sentinel:7.2.4-debian-12-r10
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 7.2.4
+    created: "2024-10-08T15:19:43.090924+09:00"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Redis(R) is an open source, advanced key-value store. It is often
+      referred to as a data structure server since keys can contain strings, hashes,
+      lists, sets and sorted sets.
+    digest: 58109c14e05cc7c9fe7245450ded3e9b6a0b6e508d99d8d61b315de3acc003e8
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+    keywords:
+    - redis
+    - keyvalue
+    - database
+    maintainers:
+    - name: VMware, Inc.
+      url: https://github.com/bitnami/charts
+    name: redis
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/redis
+    urls:
+    - https://itc-cloud-soft.github.io/chart/dify/charts/redis-19.1.5.tgz
+    version: 19.1.5
+generated: "2024-10-08T15:19:43.069627+09:00"
